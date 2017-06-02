@@ -92,7 +92,7 @@ _zsh_prioritize_cwd_history_cwd_hist_entries() {
 		sed -e 's/[|]/\\|/g'
 	)"
 
-	grep "$pattern" "$HISTFILE"
+	cat "$HISTFILE" | grep "$pattern"
 }
 
 # Reads history entries executed in the current working directory into
